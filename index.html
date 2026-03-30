@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VOIDCRAFT® — Independent Creative Studio. We build bold digital experiences." />
+  <title>VOIDCRAFT® — Independent Creative Studio</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="PL">
+    <div class="pl-w">
+      <div class="pl-logo">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+          <polygon points="0,32 16,0 32,32" fill="#e63329"/>
+          <polygon points="6,32 16,14 26,32" fill="#050505"/>
+        </svg>
+        VOIDCRAFT®
+      </div>
+      <div id="pn">0</div>
+      <div class="pl-bar"><div id="pf"></div></div>
+    </div>
+  </div>
+
+  <!-- THREE.JS CANVAS -->
+  <canvas id="oc"></canvas>
+
+  <!-- CURSOR -->
+  <div id="cd"></div>
+  <div id="cr"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="pb"></div>
+
+  <!-- NAV -->
+  <nav id="NV">
+    <a class="nl" href="#">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+        <polygon points="0,32 16,0 32,32" fill="#e63329"/>
+        <polygon points="6,32 16,14 26,32" fill="#000"/>
+      </svg>
+      <span class="nlw">VOIDCRAFT®</span>
+    </a>
+    <p class="ntag">Independent Creative Studio — Kollam <em>/ IN</em></p>
+    <button class="nhbg" id="hbg" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MENU OVERLAY -->
+  <div id="MN" role="dialog" aria-label="Navigation menu">
+    <button class="mc" id="mcls" aria-label="Close menu"><span></span><span></span></button>
+    <div class="mn-left">
+      <nav class="mn">
+        <a href="#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>
+          Work
+        </a>
+        <a href="#about">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>
+          About
+        </a>
+        <a href="#services">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>
+          Services
+        </a>
+        <a href="#journal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>
+          Journal
+        </a>
+        <a href="#footer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>
+          Contact
+        </a>
+      </nav>
+    </div>
+    <div class="mn-right">
+      <div>
+        <p class="mn-right-label">Get in touch</p>
+        <div class="mn-info">
+          <p>hello@voidcraft.studio</p>
+          <p>+91 470 123 4567</p>
+          <p>Kollam, Kerala, IN</p>
+        </div>
+      </div>
+      <div>
+        <p class="mn-right-label">Follow us</p>
+        <div class="mn-social">
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter / X
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+            Instagram
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL HINT -->
+  <div id="sh">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    SCROLL
+  </div>
+
+  <!-- SMOOTH SCROLL ROOT -->
+  <div id="SR">
+    <div id="SC">
+
+      <!-- ══ HERO ══ -->
+      <section class="s" id="hero">
+        <div style="width:100%">
+          <div class="h-top">
+            <div class="h-badge"><span></span>Available for Projects</div>
+            <span class="h-year">Est. 1999</span>
+          </div>
+          <p class="h-eye" id="heye">Wherever you imagine the future, we'll help you</p>
+          <h1 class="hb">
+            <span class="hl"><span class="hi" id="hl0">BUILD</span></span>
+            <span class="hl"><span class="hi" id="hl1">BOLDER</span></span>
+          </h1>
+          <div class="h-bottom rv" style="--d:.2s">
+            <p class="h-desc">We are a creative studio that turns ideas into bold digital experiences — from brand to code to motion.</p>
+            <div class="h-cta">
+              <a class="btn-outline" href="#work">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l4 4-4 4"/></svg>
+                View Work
+              </a>
+              <a class="btn-outline" href="#footer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                Contact Us
+              </a>
+            </div>
+            <div class="h-stats">
+              <div class="h-stat">
+                <span class="h-stat-n">200<span style="color:var(--r)">+</span></span>
+                <span class="h-stat-l">Projects</span>
+              </div>
+              <div class="h-stat">
+                <span class="h-stat-n">26</span>
+                <span class="h-stat-l">Years</span>
+              </div>
+              <div class="h-stat">
+                <span class="h-stat-n">98<span style="color:var(--r)">%</span></span>
+                <span class="h-stat-l">Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ MARQUEE 1 ══ -->
+      <div id="mq1"></div>
+
+      <!-- ══ WORK ══ -->
+      <section class="s" id="work" style="flex-direction:column;justify-content:center">
+        <div class="w-top rv" style="--d:0s">
+          <div class="w-brand">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            SELECTED WORK
+          </div>
+          <div style="display:flex;align-items:center;gap:24px">
+            <span id="snum">01</span>
+            <div class="dots">
+              <button class="dot on" data-i="0" aria-label="Slide 1"></button>
+              <button class="dot" data-i="1" aria-label="Slide 2"></button>
+              <button class="dot" data-i="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+        <div class="slides rv" style="--d:.06s">
+          <div class="slide on" data-i="0">
+            <p class="sl-kicker">Brand Identity · 2025</p>
+            <h2 class="st">NOVA<br>PULSE</h2>
+            <div class="sl-meta">
+              <span class="sl-cat">Strategy · Visual · Web</span>
+              <a class="sl-arrow" href="#">View Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+            </div>
+          </div>
+          <div class="slide" data-i="1">
+            <p class="sl-kicker">Web Platform · 2024</p>
+            <h2 class="st">ARCH<br>URBAN</h2>
+            <div class="sl-meta">
+              <span class="sl-cat">UX Design · Development</span>
+              <a class="sl-arrow" href="#">View Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+            </div>
+          </div>
+          <div class="slide" data-i="2">
+            <p class="sl-kicker">Motion Design · 2024</p>
+            <h2 class="st">LYRA<br>STUDIO</h2>
+            <div class="sl-meta">
+              <span class="sl-cat">Animation · Branding</span>
+              <a class="sl-arrow" href="#">View Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ ABOUT ══ -->
+      <section class="s" id="about">
+        <div>
+          <p class="at rv" style="--d:0s">VOIDCRAFT is a creative studio built on <em>craft &amp; obsession</em> — on a mission to elevate your digital presence beyond the ordinary.</p>
+          <div class="a-row rv" style="--d:.1s">
+            <a class="a-btn" href="#about">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              About Us
+            </a>
+            <a class="a-btn" href="#services">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+              Capabilities
+            </a>
+            <span class="a-since">Studio since 1999</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ STATS ══ -->
+      <section class="s sa" id="stats">
+        <div class="stats-grid">
+          <div class="stat-item rv" style="--d:0s">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+            <div class="stat-n">200<span class="stat-plus">+</span></div>
+            <p class="stat-l">Projects delivered<br>across 3 continents</p>
+          </div>
+          <div class="stat-item rv" style="--d:.07s">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            <div class="stat-n">86<span class="stat-plus">+</span></div>
+            <p class="stat-l">Long-term clients<br>globally retained</p>
+          </div>
+          <div class="stat-item rv" style="--d:.14s">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="stat-n">34<span class="stat-plus">+</span></div>
+            <p class="stat-l">Industry awards<br>and recognitions</p>
+          </div>
+          <div class="stat-item rv" style="--d:.21s">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div class="stat-n">26</div>
+            <p class="stat-l">Years of craft<br>since 1999</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SERVICES ══ -->
+      <section class="s sa" id="services">
+        <div class="sv-head rv" style="--d:0s">
+          <h2 class="sv-title">What We Do</h2>
+          <span class="sv-count">04 SERVICES</span>
+        </div>
+        <div class="svgrid">
+          <div class="svc rv" style="--d:.0s">
+            <svg class="sv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <p class="svn">01 / Web</p>
+            <h3 class="svh">Web Design &amp;<br>Development</h3>
+            <p class="svp">From concept to code — fast, beautiful, responsive digital experiences that make people stop scrolling and start engaging.</p>
+            <a class="sv-link" href="#">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+          </div>
+          <div class="svc rv" style="--d:.07s">
+            <svg class="sv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <p class="svn">02 / Brand</p>
+            <h3 class="svh">Brand Identity &amp;<br>Strategy</h3>
+            <p class="svp">Your brand is the story only you can tell. We help you tell it with precision and staying power that outlasts every trend.</p>
+            <a class="sv-link" href="#">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+          </div>
+          <div class="svc rv" style="--d:.14s">
+            <svg class="sv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            <p class="svn">03 / Motion</p>
+            <h3 class="svh">Motion &amp;<br>Interaction</h3>
+            <p class="svp">Motion is not decoration — it is communication. We craft interactions that guide, delight, and make your product feel genuinely alive.</p>
+            <a class="sv-link" href="#">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+          </div>
+          <div class="svc rv" style="--d:.21s">
+            <svg class="sv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            <p class="svn">04 / Content</p>
+            <h3 class="svh">Content &amp;<br>Growth</h3>
+            <p class="svp">Content that earns attention. Strategy that converts. We build the engine that keeps your audience coming back for more.</p>
+            <a class="sv-link" href="#">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ MARQUEE 2 ══ -->
+      <div id="mq2"></div>
+
+      <!-- ══ AWARDS ══ -->
+      <section class="s sa" id="awards">
+        <div style="width:100%">
+          <p class="aw-head">Recognition &amp; Awards</p>
+          <div class="aw-grid rv" style="--d:0s">
+            <div class="aw-item">
+              <svg class="aw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <p class="aw-name">Awwwards</p>
+              <p class="aw-year">SOTD · 2024</p>
+            </div>
+            <div class="aw-item">
+              <svg class="aw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <p class="aw-name">CSS Design</p>
+              <p class="aw-year">Winner · 2024</p>
+            </div>
+            <div class="aw-item">
+              <svg class="aw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>
+              <p class="aw-name">D&amp;AD</p>
+              <p class="aw-year">Pencil · 2023</p>
+            </div>
+            <div class="aw-item">
+              <svg class="aw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+              <p class="aw-name">FWA</p>
+              <p class="aw-year">SOTM · 2023</p>
+            </div>
+            <div class="aw-item">
+              <svg class="aw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p class="aw-name">Webby</p>
+              <p class="aw-year">Nominee · 2022</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ JOURNAL ══ -->
+      <section class="s sa" id="journal">
+        <div class="jn-top rv" style="--d:0s">
+          <h2 class="jn-title">Journal</h2>
+          <a class="jn-all" href="#">All Articles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+        </div>
+        <div class="jn-grid rv" style="--d:.08s">
+          <div class="jn-item">
+            <div class="jd">Jun 12<br>2025</div>
+            <div class="jn-main">
+              <p class="jn-tag"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Branding</p>
+              <h2 class="jh">How to Build a Brand People Actually Remember</h2>
+              <p class="jp">In a world saturated with logos, the brands that endure are built on genuine conviction — the invisible architecture of trust and meaning.</p>
+            </div>
+            <div class="jn-right">
+              <p class="jn-by">By</p>
+              <p class="jn-author">Aiden Marsh</p>
+              <a class="jn-read" href="#">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+            </div>
+          </div>
+          <div class="jn-item">
+            <div class="jd">May 3<br>2025</div>
+            <div class="jn-main">
+              <p class="jn-tag"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Motion</p>
+              <h2 class="jh">The Animation Principles That Still Matter in 2025</h2>
+              <p class="jp">Disney's 12 principles were designed for hand-drawn film. Here's how they translate — and evolve — for the web.</p>
+            </div>
+            <div class="jn-right">
+              <p class="jn-by">By</p>
+              <p class="jn-author">Priya Nair</p>
+              <a class="jn-read" href="#">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+            </div>
+          </div>
+          <div class="jn-item">
+            <div class="jd">Apr 18<br>2025</div>
+            <div class="jn-main">
+              <p class="jn-tag"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/></svg>Design</p>
+              <h2 class="jh">Why White Space Is the Most Powerful Design Tool</h2>
+              <p class="jp">Negative space doesn't mean empty space. It means purposeful silence — the breath between notes that makes the music.</p>
+            </div>
+            <div class="jn-right">
+              <p class="jn-by">By</p>
+              <p class="jn-author">Rohan Dev</p>
+              <a class="jn-read" href="#">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ FOOTER ══ -->
+      <footer class="s sa" id="footer">
+        <div class="fc"><span>KOLL</span><span>AM</span><span class="fcs">/ IN</span></div>
+        <div class="ft-main rv" style="--d:0s">
+          <div class="ft-col">
+            <p class="ft-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Studio</p>
+            <p class="ft-big">Let's build<br>something bold.</p>
+            <p class="ft-text">We work with ambitious brands and individuals who believe that good design changes everything.</p>
+            <div class="ft-social">
+              <a class="ft-soc" href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a class="ft-soc" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+              <a class="ft-soc" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a class="ft-soc" href="#" aria-label="Dribbble"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></a>
+            </div>
+          </div>
+          <div class="ft-col">
+            <p class="ft-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Navigate</p>
+            <a class="ft-a" href="#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>Work</a>
+            <a class="ft-a" href="#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>About</a>
+            <a class="ft-a" href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>Services</a>
+            <a class="ft-a" href="#journal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7l5 5-5 5M6 12h12"/></svg>Journal</a>
+          </div>
+          <div class="ft-col">
+            <p class="ft-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 6.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 11.1a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17v-.08z"/></svg>Contact</p>
+            <a class="ft-a" href="tel:+914701234567">+91 470 123 4567</a>
+            <a class="ft-a" href="mailto:hello@voidcraft.studio">hello@voidcraft.studio</a>
+            <a class="ft-a" href="#">Kollam, Kerala, India</a>
+          </div>
+          <div class="ft-col">
+            <p class="ft-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Newsletter</p>
+            <p style="font-size:12px;color:rgba(255,255,255,.35);line-height:1.7;margin-bottom:16px">Get our latest thinking on design, code, and culture.</p>
+            <div class="ft-form">
+              <input type="email" placeholder="your@email.com" aria-label="Email address"/>
+              <button type="button" aria-label="Subscribe">→</button>
+            </div>
+          </div>
+        </div>
+        <div class="ft-bot">
+          <nav class="ft-nav">
+            <a href="#work">Projects</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#footer">Contact</a>
+          </nav>
+          <p>© 1999–2025 / VOIDCRAFT LLC. All rights reserved.</p>
+          <p class="ft-cities">KLM / BLR / MUM / DEL</p>
+        </div>
+      </footer>
+
+    </div><!-- /SC -->
+  </div><!-- /SR -->
+
+  <!-- Scroll height sentinel -->
+  <div id="SH"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
