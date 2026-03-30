@@ -3,3 +3,10 @@ dist/
 .DS_Store
 *.local
 .env
+
+# AI Git Agent
+.agent_state.json
+
+.agent_pid
+
+.agent_log.txt
